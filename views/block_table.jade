@@ -1,0 +1,90 @@
+extends ./new_layout.jade
+
+block title
+  title Week #{week} Predictions
+
+block content
+  #page-wrapper
+    .row
+      .col-lg-12
+        h1.page-header Tables
+          // /.col-lg-12
+        // /.row
+        .row
+          .col-lg-12
+            .panel.panel-default
+              .panel-heading
+                | Week #{week} Table
+              // /.panel-heading
+              .panel-body
+                .dataTable_wrapper
+                  table#dataTables-example.table.table-striped.table-bordered.table-hover
+           
+                // /.table-responsive
+              // /.panel-body
+            // /.panel
+          // /.col-lg-12
+        // /.row
+        // /.row
+      // /#page-wrapper
+    // /#wrapper
+    // jQuery
+    script(src='../bootstrap_stuff/bower_components/jquery/dist/jquery.min.js')
+    // Bootstrap Core JavaScript
+    script(src='../bootstrap_stuff/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    // Metis Menu Plugin JavaScript
+    script(src='../bootstrap_stuff/bower_components/metisMenu/dist/metisMenu.min.js')
+    // DataTables JavaScript
+    script(src='../bootstrap_stuff/bower_components/datatables/media/js/jquery.dataTables.min.js')
+    script(src='../bootstrap_stuff/bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js')
+    // Custom Theme JavaScript
+    script(src='../bootstrap_stuff/dist/js/sb-admin-2.js')
+
+
+
+    script.
+      var myJson= [];
+      var i = 0;
+      $.getJSON("../data/week#{week}.json", function(data){
+        for(person in data){
+          var thisData =[];
+          thisData[0] = data[i].home;
+          thisData[1] = data[i].away;
+          thisData[2] = data[i].vegas;
+          thisData[3] = data[i].vegas_difference;
+          thisData[4] = data[i].predicted_home;
+          thisData[5] = data[i].predicted_away;
+          thisData[6] = data[i].predicted_winner;
+          thisData[7] = data[i].difference;
+          thisData[8] = data[i].actual_home;
+          thisData[9] = data[i].actual_away;
+          myJson.push(thisData);
+          i++;
+        }
+
+        $('#dataTables-example').DataTable({
+          data: myJson, 
+          columns: [
+            {title: "home"},
+            {title: "away"},
+            {title: "vegas"}, 
+            {title: "vegas_difference"},
+            {title: "predicted_home"},
+            {title: "predicted_away"},
+            {title: "predicted_winner"},
+            {title: "difference"},
+            {title: "actual_home"},
+            {title: "actual_away"}
+          ]
+          });
+              //myJson = data;
+        });
+
+
+    // Page-Level Demo Scripts - Tables - Use for reference
+   // script.
+   //   $(document).ready(function() {
+   //   $('#dataTables-example').DataTable({
+ //     responsive: true
+ //     });
+  //    });
