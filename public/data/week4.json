@@ -1,0 +1,48 @@
+[
+    {
+		"home": "Texas A&M",
+		"away": "Arkansas",
+		"vegas": "A&M",
+		"vegas_difference": "13",
+		"predicted_home": "31",
+		"predicted_away": "14",
+		"predicted_winner":"A&M",
+		"difference": "17",
+		"actual_home": "",
+		"actual_away": ""
+    },
+    {
+		"home": "Texas",
+		"away": "Ok State",
+		"vegas": "Ok State",
+		"vegas_difference":"7",
+		"predicted_home": "31",
+		"predicted_away": "27",
+		"predicted_winner":"Texas",
+		"difference": "4",
+		"actual_home": "",
+		"actual_away": ""
+    },    {
+		"home": "Alabama",
+		"away": "ULM",
+		"vegas": "Alabama",
+		"vegas_difference": "27",
+		"predicted_home": "38",
+		"predicted_away": "10",
+		"predicted_winner": "Alabama",
+		"difference":"18",
+		"actual_home": "",
+		"actual_away": ""
+    },    {
+		"home": "Ole Miss",
+		"away": "Auburn",
+		"vegas": "Ole Miss",
+		"vegas_difference": "21",
+		"predicted_home": "31",
+		"predicted_away": "14",
+		"predicted_winner":"Ole Miss",
+		"difference":"17",
+		"actual_home": "",
+		"actual_away": ""
+    }
+]

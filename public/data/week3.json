@@ -1,0 +1,36 @@
+[
+    {
+		"home": "Texas A&M",
+		"away": "Arkansas",
+		"vegas": "A&M -13",
+		"predicted_home": "31",
+		"predicted_away": "14",
+		"actual_home": "",
+		"actual_away": ""
+    },
+    {
+		"home": "Texas",
+		"away": "Ok State",
+		"vegas": "Ok State -7",
+		"predicted_home": "31",
+		"predicted_away": "27",
+		"actual_home": "",
+		"actual_away": ""
+    },    {
+		"home": "Alabama",
+		"away": "ULM",
+		"vegas": "Alabama -24",
+		"predicted_home": "38",
+		"predicted_away": "10",
+		"actual_home": "",
+		"actual_away": ""
+    },    {
+		"home": "Ole Miss",
+		"away": "Auburn",
+		"vegas": "Ole Miss -17",
+		"predicted_home": "31",
+		"predicted_away": "14",
+		"actual_home": "",
+		"actual_away": ""
+    },
+]
