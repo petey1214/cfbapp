@@ -39,7 +39,7 @@ module.exports = function(passport){
 	}));
 
 	/* GET Home Page */
-	router.get('/home', isAuthenticated, function(req, res){
+	router.get('/home2', isAuthenticated, function(req, res){
 		res.render('test_view', { user: req.user });
 	});
 
@@ -58,8 +58,20 @@ module.exports = function(passport){
 		res.render('test_view',{user: 'Petey'});
 	});
 
-	router.get('/week/:id', isAuthenticated, function(req, res){
+	router.get('/week2/:id', isAuthenticated, function(req, res){
 		res.render('test_table',{week: req.param('id')});
+	});
+
+	router.get('layout', function(req,res){
+		res.render('layout');
+	});
+
+	router.get('/week/:id', isAuthenticated, function(req,res){
+		res.render('block_table',{week:req.param('id')});
+	})
+
+	router.get('/home', isAuthenticated, function(req,res){
+		res.render('new_test_view',{user:req.user});
 	});
 
 	return router;
